@@ -35,10 +35,20 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       
+      - name: Access file
+        run: echo hello world > ~/hello
+      
       - name: Get Info
         run: |
           uname -a
           python3 --version
           pwd
           ls
+          echo $SHELL
+
+      - name: Run Python script
+        run: python3 example.py
+
+      - name: Panic
+        run: false
           
